@@ -11,3 +11,12 @@ The following commands (1) download, install and configure the container with al
 docker build -t ethanol github.com/h3dema/ethanol_devel.git
 docker run -w /home/ethanol -it ethanol
 ```
+
+# Docker installation #
+
+The installation of Docker is easy in Ubuntu 14.04 or latter.
+Just issue the command:
+
+```bash
+sudo apt-get install -y docker.io
+```
