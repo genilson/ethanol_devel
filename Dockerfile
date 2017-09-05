@@ -26,4 +26,5 @@ RUN apt-get install -y git
 RUN mkdir -p /home/ethanol && \
     cd /home/ethanol && \
     git clone https://github.com/h3dema/ethanol_controller.git && \
-    cd ethanol_controller
+    cd ethanol_controller && \
+    bash configure.sh
