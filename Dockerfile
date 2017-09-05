@@ -25,5 +25,4 @@ RUN apt-get install -y python-epydoc
 RUN cd /home/ethanol && \
     git clone https://github.com/h3dema/ethanol_controller.git && \
     cd ethanol_controller && \
-    git submodule init && \
-    git submodule update --remote 
+    git submodule update --remote --init
