@@ -20,6 +20,7 @@ RUN cd /tmp && \
     sudo ./setup.py install
 
 RUN apt-get install -y python-epydoc
+RUN apt-get install -y git
 
 # clone ethanol repository
 RUN mkdir -p /home/ethanol && \
