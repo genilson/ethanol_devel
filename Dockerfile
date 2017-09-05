@@ -22,4 +22,5 @@ RUN cd /tmp && \
 RUN apt-get install -y python-epydoc
 
 # clone ethanol repository
-
+RUN cd /home/ethanol && \
+    git clone https://github.com/h3dema/ethanol_controller.git
