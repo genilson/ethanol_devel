@@ -5,7 +5,9 @@ This repository contains a dockerfile that creates a docker container with all t
 
 # Installation #
 
+The following commands (1) download, install and configure the container with all tools and codes, and (2) starts the container, changing to the working directory (/home/ethanol).
+
 ```bash
 docker build -t ethanol github.com/h3dema/ethanol_devel.git
-docker run -it ethanol
+docker run -w /home/ethanol -it ethanol
 ```
