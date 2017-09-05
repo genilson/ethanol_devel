@@ -6,6 +6,6 @@ This repository contains a dockerfile that creates a docker container with all t
 # Installation #
 
 ```bash
-docker build -t ethanol https://bitbucket.org/henrique_moura/ethanol_devel.git
+docker build -t ethanol github.com/h3dema/ethanol_devel.git
 docker run -it ethanol
 ```
