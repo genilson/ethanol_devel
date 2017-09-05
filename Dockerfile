@@ -8,8 +8,8 @@ RUN apt-get -y update && \
 RUN pip install --upgrade pip 
 
 # python wireless dependencies
-RUN apt-get install -y libnl-dev libssl-dev libiw-dev curl libcurl3 libcurl3-dev
-RUN apt-get install -y libnl-dev libnl1
+RUN apt-get install -y libnl-dev libnl1 libssl-dev libiw-dev curl libcurl3 libcurl3-dev
+RUN apt-get install -y wireless-tools
 
 # ethanol controller dependency (python)
 RUN cd /tmp && \
