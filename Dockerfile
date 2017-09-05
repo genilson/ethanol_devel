@@ -10,6 +10,7 @@ RUN pip install --upgrade pip
 # python wireless dependencies
 RUN apt-get install -y libnl-dev libnl1 libssl-dev libiw-dev curl libcurl3 libcurl3-dev
 RUN apt-get install -y wireless-tools
+RUN apt-get install -y wget
 
 # ethanol controller dependency (python)
 RUN cd /tmp && \
