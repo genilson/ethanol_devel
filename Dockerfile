@@ -28,3 +28,7 @@ RUN mkdir -p /home/ethanol && \
     git clone https://github.com/h3dema/ethanol_controller.git && \
     cd ethanol_controller && \
     bash configure.sh
+
+RUN cd /home/ethanol && \
+    git clone https://github.com/h3dema/ethanol_hostapd.git && \
+    cd ethanol_hostapd
