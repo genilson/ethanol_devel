@@ -32,6 +32,7 @@ RUN cd /home/ethanol && \
     git clone https://github.com/h3dema/ethanol_hostapd.git && \
     cd ethanol_hostapd
 
-RUN cd /home/ethanol && \
-    cp ethanol_hostapd/certificate/mycert.pem ethanol_controller/ethanol/ssl_message/ &&
-    cp ethanol_hostapd/certificate/mycert.pem ethanol_hostapd/hostapd-2.6/src/messaging/
+RUN cd /home/ethanol
+#&& \
+#    cp ethanol_hostapd/certificate/mycert.pem ethanol_controller/ethanol/ssl_message/ &&
+#    cp ethanol_hostapd/certificate/mycert.pem ethanol_hostapd/hostapd-2.6/src/messaging/
