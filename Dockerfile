@@ -19,5 +19,7 @@ RUN cd /tmp && \
     cd construct-2.5.2 && \
     sudo ./setup.py install
 
+RUN apt-get install -y python-epydoc
+
 # clone ethanol repository
 
