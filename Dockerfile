@@ -15,11 +15,9 @@ RUN apt-get install -y wget
 # ethanol controller dependency (python)
 RUN cd /tmp && \
     wget -c https://pypi.python.org/packages/source/c/construct/construct-2.5.2.tar.gz && \ 
-    tar zxvf construct-2.5.2.tar.gz
-
-#    && \
-#    cd construct-2.5.2 && \
-#    sudo ./setup.py install
+    tar zxvf construct-2.5.2.tar.gz  && \
+    cd construct-2.5.2 && \
+    sudo ./setup.py install
 
 # clone ethanol repository
 
