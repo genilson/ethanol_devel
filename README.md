@@ -20,3 +20,11 @@ Just issue the command:
 ```bash
 sudo apt-get install -y docker.io
 ```
+
+# More info #
+
+This containers contains:
+
+* Ethanol's dependencies (downloaded and installed by Dockerfile)
+* Ethanol agent -- a modified hostapd and some helper utilities (see [ethanol_hostapd](https://github.com/h3dema/ethanol_hostapd))
+* Ethanol controller -- a POX module that implements Ethanol's architecture (see [ethanol_controller](https://github.com/h3dema/ethanol_controller))
