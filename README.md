@@ -22,6 +22,10 @@ docker build -t ethanol github.com/h3dema/ethanol_devel.git
 docker run -w /home/ethanol -it ethanol
 ```
 
+See our video in Youtube (sorry only in Portuguese) showing how to create the Ethanol's docker container.
+
+[![Ethanol's docker container](https://img.youtube.com/vi/3N3bUeCbExg/0.jpg)](https://youtu.be/3N3bUeCbExg)
+
 
 # More info #
 
