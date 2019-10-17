@@ -39,7 +39,7 @@ scp generated_tar_file user@remotehost:/home/user
 docker load -i <path to image tar file>
 ```
 
-The controller communicates with the APs through messages. A certificate file is used to provide secure communication. You can use your own certificate, just copy the .pem file to ethanol_controller/ethanol/ssl_message/ on the controller and to ethanol_hostapd/hostapd-2.6/src/messaging/ on the APs.
+The controller communicates with the APs through messages. A certificate file is used to provide secure communication. You can use your own certificate, just copy the .pem file to ethanol_controller/ethanol/ssl_message/ on the controller and to ethanol_hostapd/hostapd-2.6/src/messaging/ and /ethanol_hostapd/hostapd-2.6/hostapd on the APs.
 
 Follow instructions available in the [ethanol_hostapd repository](https://github.com/genilson/ethanol_hostapd) to compile hostapd. Bellow is an overview of what you need to get everything working (remember commands are executed inside the respective container):
 
