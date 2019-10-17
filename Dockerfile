@@ -20,19 +20,3 @@ RUN cd /tmp && \
     tar zxvf construct-2.5.2.tar.gz  && \
     cd construct-2.5.2 && \
     sudo ./setup.py install
-
-# clone ethanol repository
-RUN mkdir -p /home/ethanol && \
-    cd /home/ethanol && \
-    git clone https://github.com/h3dema/ethanol_controller.git && \
-    cd ethanol_controller && \
-    bash configure.sh
-
-RUN cd /home/ethanol && \
-    git clone https://github.com/h3dema/ethanol_hostapd.git && \
-    cd ethanol_hostapd
-
-RUN cd /home/ethanol && \
-    cp ethanol_hostapd/certificate/mycert.pem ethanol_controller/ethanol/ssl_message/ && \
-    cp ethanol_hostapd/certificate/mycert.pem ethanol_hostapd/hostapd-2.6/src/messaging/
-
