@@ -21,11 +21,13 @@ cd ~ && git clone https://github.com/genilson/ethanol_controller.git
 cd ~/ethanol_controller/ && bash configure.sh
 cd ~ && git clone https://github.com/genilson/ethanol_hostapd.git
 docker build -t ethanol_base github.com/genilson/ethanol_devel.git
-docker run -it --name ethanol_controller -w /home/ethanol_controller --mount type=bind,source=~/ethanol_controller/,target=/home/ethanol_controller ethanol_base
-docker run -it --name ethanol_ap -w /home/ethanol_hostapd --mount type=bind,source=~/ethanol_hostapd/,target=/home/ethanol_hostapd ethanol_base
+docker run -it --name ethanol_ap -w /home/ethanol_hostapd --network host --cap-add=NET_ADMIN --mount type=bind,source=/root/ethanol_hostapd/,target=/home/ethanol_hostapd ethanol_base
+docker run -it --name ethanol_ap -w /home/ethanol_hostapd --network host --mount type=bind,source=~/ethanol_hostapd/,target=/home/ethanol_hostapd ethanol_base
 ```
 
 You can add another bind mount for the .ssh folder in the Docker host so you can use git both from the docker host or the container.
+
+The options --cap-add and --network respectively allow the container to perform varios network operations (for instance, hostapd will not be able to ifup and ifdown network interfaces without it) and exposes the docker host network stack to the container (does not isolate it, so network interfaces, IP addresses, etc., inside the container are seen just like they are seen in the docker host).
 
 After completing these steps you can make changes locally on the code and those changes will be visible inside the container (and vice-versa) for testing.
 
