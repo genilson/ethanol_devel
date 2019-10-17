@@ -41,7 +41,7 @@ The controller communicates with the APs through messages. A certificate file is
 
 Follow instructions available in the [ethanol_hostapd repository](https://github.com/genilson/ethanol_hostapd) to compile hostapd. Bellow is an overview of what you need to get everything working (remember commands are executed inside the respective container):
 
-## Running hostapd##
+## Running hostapd ##
 
 To run Ethanol's hostapd you need to put in the same directory the following files:
 * the modified version of hostapd -- this file is generated after compilation in the [hostadp directory of this repository](https://github.com/genilson/ethanol_hostapd/tree/master/hostapd-2.6/hostapd).
@@ -65,7 +65,7 @@ After making sure that everything is compiled and put in the right places run:
 ```bash
 $ sudo hostapd ./hostapd.conf
 ```
-## Running Ethanol Controller##
+## Running Ethanol Controller ##
 Just run:
 ```bash
 cd /home/ethanol_controller/pox
